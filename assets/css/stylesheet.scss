@@ -961,8 +961,9 @@ section {
         font-size: 20px;
         margin-bottom: 15px;
     }
+
     @media screen and (max-width:767px) {
-       text-align: center;
+        text-align: center;
     }
 
     // &::after {
@@ -1015,7 +1016,7 @@ section {
         }
 
         @media screen and (max-width:991px) {
-            font-size: 22px;
+            font-size: 20px;
         }
 
         @media screen and (max-width:767px) {
@@ -1309,17 +1310,19 @@ section {
         }
     }
 
-    .brandSupports {
-        margin-top: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
+    .brandwraper {
         figure {
             max-height: 55px;
             max-width: 165px;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             img {
+                max-width: 90%;
+                max-height: 90%;
                 filter: grayscale(100%);
 
                 &:hover {
@@ -1491,6 +1494,10 @@ section {
                     margin-bottom: 20px;
                 }
 
+                @media screen and (max-width:991px) {
+                    padding-left: 20px;
+                }
+
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -1529,6 +1536,7 @@ section {
 
                     @media screen and (max-width:991px) {
                         top: 29px;
+                        width: 30px;
                     }
                 }
 
@@ -1689,6 +1697,11 @@ section {
 
     @media screen and (max-width:1440px) {
         padding: 8px 24px;
+    }
+
+    @media screen and (max-width:991px) {
+        padding: 6px 20px;
+        font-size: 15px;
     }
 
     @media screen and (max-width:767px) {
@@ -2250,6 +2263,21 @@ section {
             @media screen and (max-width:1440px) {
                 padding-left: 20px;
             }
+
+            @media screen and (max-width:767px) {
+                padding: 20px;
+            }
+
+            p {
+                @media screen and (max-width:991px) {
+                    width: 110%;
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width:767px) {
+                    width: 100%;
+                }
+            }
         }
 
         h2 {
@@ -2286,10 +2314,18 @@ section {
     h2 {
         margin: 30px 0;
         padding: 0;
+
+        @media screen and (max-width:991px) {
+            margin: 15px 0;
+        }
     }
 
     p {
         padding: 0 25%;
+
+        @media screen and (max-width:991px) {
+            padding: 0 10%;
+        }
     }
 
     &::before {
@@ -2497,6 +2533,7 @@ footer {
         @media screen and (max-width:1440px) {
             width: 100%;
         }
+
         @media screen and (max-width:1440px) {
             width: 70%;
         }
@@ -2563,10 +2600,11 @@ footer {
     @media screen and (max-width:1440px) {
         position: relative;
     }
+
     @media screen and (max-width:767px) {
-       width: 100%;
-       bottom: 0;
-       margin-top: 30px;
+        width: 100%;
+        bottom: 0;
+        margin-top: 30px;
     }
 }
 
@@ -2592,10 +2630,12 @@ footer {
 
 .flogo {
     width: 220px;
+
     @media screen and(max-width:767px) {
         width: 135px;
         display: inline-block;
     }
+
     img {
         max-width: 100%;
     }
@@ -2616,6 +2656,7 @@ footer {
     @media screen and(max-width:1440px) {
         margin: 20px 0;
     }
+
     li {
         display: inline-block;
         margin: 0 5px;
@@ -2845,11 +2886,13 @@ footer {
         margin-left: 20px;
         margin-bottom: 29px;
         padding: 0 0 0 20px;
+
         @media screen and (max-width:767px) {
             border: none;
             margin: 0;
             display: flex;
             align-items: center;
+            text-align: center;
             padding: 0;
             justify-content: space-between;
         }

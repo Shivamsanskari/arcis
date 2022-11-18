@@ -886,7 +886,7 @@ section {
 }
 @media screen and (max-width: 991px) {
   .homeCountings h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1160,20 +1160,21 @@ section {
     margin-bottom: 20px;
   }
 }
-.clients .brandSupports {
-  margin-top: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.clients .brandSupports figure {
+.clients .brandwraper figure {
   max-height: 55px;
   max-width: 165px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.clients .brandSupports figure img {
+.clients .brandwraper figure img {
+  max-width: 90%;
+  max-height: 90%;
   filter: grayscale(100%);
 }
-.clients .brandSupports figure img:hover {
+.clients .brandwraper figure img:hover {
   filter: none;
 }
 .clients::after {
@@ -1334,6 +1335,11 @@ section {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 991px) {
+  .caseStudy .stairList .stairTree li {
+    padding-left: 20px;
+  }
+}
 .caseStudy .stairList .stairTree li:last-child {
   margin-bottom: 0;
 }
@@ -1374,6 +1380,7 @@ section {
 @media screen and (max-width: 991px) {
   .caseStudy .stairList .stairTree li::after {
     top: 29px;
+    width: 30px;
   }
 }
 .caseStudy .stairList .stairTree li .foricon {
@@ -1533,6 +1540,12 @@ section {
 @media screen and (max-width: 1440px) {
   .clkbtn {
     padding: 8px 24px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .clkbtn {
+    padding: 6px 20px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2076,6 +2089,22 @@ section {
     padding-left: 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .futureBox .futureWrapper .leftBox {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .futureBox .futureWrapper .leftBox p {
+    width: 110%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .futureBox .futureWrapper .leftBox p {
+    width: 100%;
+  }
+}
 .futureBox .futureWrapper h2 {
   font-size: 38px;
 }
@@ -2107,8 +2136,18 @@ section {
   margin: 30px 0;
   padding: 0;
 }
+@media screen and (max-width: 991px) {
+  .contactBox h2 {
+    margin: 15px 0;
+  }
+}
 .contactBox p {
   padding: 0 25%;
+}
+@media screen and (max-width: 991px) {
+  .contactBox p {
+    padding: 0 10%;
+  }
 }
 .contactBox::before {
   position: absolute;
@@ -2664,6 +2703,7 @@ footer::before {
     margin: 0;
     display: flex;
     align-items: center;
+    text-align: center;
     padding: 0;
     justify-content: space-between;
   }
