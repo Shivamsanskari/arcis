@@ -2766,18 +2766,19 @@ footer::before {
 }
 .testimonialsHomepage .testi-slider {
   position: relative;
-  padding-bottom: 80px;
 }
 @media screen and (max-width: 767px) {
   .testimonialsHomepage .testi-slider {
     padding-bottom: 0px;
   }
 }
+.testimonialsHomepage .testi-slider .swiper {
+  padding-bottom: 75px;
+}
 .testimonialsHomepage .testi-slider .swiper-pagination {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 5px;
   width: auto;
 }
 .testimonialsHomepage .testi-slider .swiper-pagination .swiper-pagination-bullet {
@@ -2806,13 +2807,15 @@ footer::before {
   background: #535356;
 }
 .testimonialsHomepage .testi-slider .carousel-control {
-  position: absolute;
-  bottom: 0px;
-  transform: translateX(-50%);
   width: 40px;
   height: 40px;
   border: 1px solid #1E1E1E;
   border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
+  z-index: 9;
 }
 @media screen and (max-width: 1440px) {
   .testimonialsHomepage .testi-slider .carousel-control {

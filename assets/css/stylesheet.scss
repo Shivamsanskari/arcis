@@ -2959,17 +2959,16 @@ footer {
 
     .testi-slider {
         position: relative;
-        padding-bottom: 80px;
-
         @media screen and (max-width:767px) {
             padding-bottom: 0px;
         }
-
+        .swiper{
+            padding-bottom: 75px;
+        }
         .swiper-pagination {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 5px;
             width: auto;
 
             .swiper-pagination-bullet {
@@ -3001,15 +3000,17 @@ footer {
                 }
             }
         }
-
         .carousel-control {
-            position: absolute;
-            bottom: 0px;
-            transform: translateX(-50%);
             width: 40px;
             height: 40px;
             border: 1px solid $primary;
             border-radius: 50%;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 5px;
+            z-index: 9;
 
             @media screen and (max-width:1440px) {
                 width: 36px;
