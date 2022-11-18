@@ -340,78 +340,38 @@ header .navbar-nav.mainmenu li a.contact:hover::before {
 header .navbar-nav.mainmenu li a.contact:hover span {
   color: #4958BF;
 }
-header .navbar-nav.mainmenu li a.openmenu {
-  position: relative;
+header .navbar-nav.mainmenu .menuMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .navbar-nav.mainmenu .menuMobile .hamburgerMenu {
+  margin-left: 10px;
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  header .navbar-nav.mainmenu .menuMobile .hamburgerMenu {
+    display: block;
+  }
+}
+header .navbar-nav.mainmenu .menuMobile .bar1,
+header .navbar-nav.mainmenu .menuMobile .bar2,
+header .navbar-nav.mainmenu .menuMobile .bar3 {
   width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  padding: 13px;
-  display: block;
-  border: 1px solid transparent;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+  border-radius: 3px;
+  transition: 0.4s;
 }
-@media screen and (max-width: 1440px) {
-  header .navbar-nav.mainmenu li a.openmenu {
-    width: 36px;
-    height: 36px;
-    padding: 12px 10px;
-  }
+header .navbar-nav.mainmenu .menuMobile .change .bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
 }
-@media screen and (max-width: 767px) {
-  header .navbar-nav.mainmenu li a.openmenu {
-    width: 32px;
-    height: 32px;
-    padding: 9px 7px;
-  }
+header .navbar-nav.mainmenu .menuMobile .change .bar2 {
+  opacity: 0;
 }
-header .navbar-nav.mainmenu li a.openmenu span {
-  position: relative;
-  width: 15px;
-  height: 12px;
-  display: block;
-  border-top: 2px solid #535356;
-  border-bottom: 2px solid #535356;
-}
-@media screen and (max-width: 767px) {
-  header .navbar-nav.mainmenu li a.openmenu span {
-    width: 16px;
-  }
-}
-header .navbar-nav.mainmenu li a.openmenu span small {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  top: 3px;
-  background: #535356;
-  transition: 0.2s ease-in-out;
-  transform-origin: center center;
-  transform: rotate(0);
-}
-header .navbar-nav.mainmenu li a.openmenu.opened {
-  padding-top: 15px;
-}
-@media screen and (max-width: 1440px) {
-  header .navbar-nav.mainmenu li a.openmenu.opened {
-    padding-top: 14px;
-  }
-}
-@media screen and (max-width: 767px) {
-  header .navbar-nav.mainmenu li a.openmenu.opened {
-    padding-top: 11px;
-  }
-}
-header .navbar-nav.mainmenu li a.openmenu.opened span {
-  border: none;
-}
-header .navbar-nav.mainmenu li a.openmenu.opened span small {
-  left: -1px;
-}
-header .navbar-nav.mainmenu li a.openmenu.opened span small.first {
-  transform: rotate(-45deg);
-}
-header .navbar-nav.mainmenu li a.openmenu.opened span small.second {
-  transform: rotate(45deg);
+header .navbar-nav.mainmenu .menuMobile .change .bar3 {
+  transform: translate(0, -10px) rotate(45deg);
 }
 header.sticky {
   background: rgba(255, 255, 255, 0.9);
@@ -445,6 +405,11 @@ header.sticky .navbar-nav.mainmenu li a.contact:hover {
   background: transparent;
   border: 1px solid #1E1E1E;
   color: #1E1E1E;
+}
+header.sticky .navbar-nav.mainmenu .menuMobile .bar1,
+header.sticky .navbar-nav.mainmenu .menuMobile .bar2,
+header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
+  background-color: #000000;
 }
 
 .homebanner {
@@ -830,6 +795,12 @@ section {
   position: relative;
   font-family: "Raleway", sans-serif;
 }
+@media screen and (max-width: 991px) {
+  .smallTopHeading {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
 .smallTopHeading::after {
   position: absolute;
   bottom: 0;
@@ -882,6 +853,11 @@ section {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 991px) {
+  .homeCountings::before {
+    display: none;
+  }
+}
 .homeCountings h2 {
   font-size: 36px;
   margin: 17px 0;
@@ -892,8 +868,18 @@ section {
     font-size: 28px;
   }
 }
+@media screen and (max-width: 991px) {
+  .homeCountings h2 {
+    font-size: 22px;
+  }
+}
 .homeCountings h2 span {
   color: #4958BF;
+}
+@media screen and (max-width: 991px) {
+  .homeCountings svg {
+    height: 36px;
+  }
 }
 .homeCountings::before {
   position: absolute;
@@ -921,6 +907,11 @@ section {
   position: relative;
   background: transparent linear-gradient(90deg, #394074 0%, #505AA2 100%) 0% 0% no-repeat padding-box;
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .industries::before {
+    display: none;
+  }
 }
 .industries::before {
   position: absolute;
@@ -1122,11 +1113,26 @@ section {
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 991px) {
+  .clients::after {
+    display: none;
+  }
+}
 .clients h2 {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 60px;
   max-width: 840px;
+}
+@media screen and (max-width: 991px) {
+  .clients h2 {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .clients h2 {
+    margin-bottom: 20px;
+  }
 }
 .clients .brandSupports {
   margin-top: 60px;
@@ -1172,6 +1178,16 @@ section {
   background: transparent linear-gradient(90deg, #003A74 0%, #0D82AF 100%) 0% 0% no-repeat padding-box;
   color: #FFFFFF;
 }
+@media screen and (max-width: 991px) {
+  .caseStudy::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .caseStudy::after {
+    display: none;
+  }
+}
 .caseStudy h3 {
   margin-bottom: 33px;
 }
@@ -1204,8 +1220,18 @@ section {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 991px) {
+  .caseStudy .tabData p {
+    font-size: 14px;
+  }
+}
 .caseStudy .tabData .smallText {
   font-size: 18px;
+}
+@media screen and (max-width: 991px) {
+  .caseStudy .tabData .smallText {
+    font-size: 14px;
+  }
 }
 .caseStudy::before {
   position: absolute;
@@ -1300,6 +1326,11 @@ section {
     top: 30px;
   }
 }
+@media screen and (max-width: 991px) {
+  .caseStudy .stairList .stairTree li::before {
+    top: 25px;
+  }
+}
 .caseStudy .stairList .stairTree li::after {
   position: absolute;
   top: 44px;
@@ -1314,9 +1345,19 @@ section {
     top: 34px;
   }
 }
+@media screen and (max-width: 991px) {
+  .caseStudy .stairList .stairTree li::after {
+    top: 29px;
+  }
+}
 .caseStudy .stairList .stairTree li .foricon {
   position: relative;
   margin-right: 20px;
+}
+@media screen and (max-width: 991px) {
+  .caseStudy .stairList .stairTree li .foricon {
+    margin-right: 10px;
+  }
 }
 .caseStudy .stairList .stairTree li .foricon img {
   height: 90px;
@@ -1324,6 +1365,11 @@ section {
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li .foricon img {
     height: 70px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .caseStudy .stairList .stairTree li .foricon img {
+    height: 60px;
   }
 }
 .caseStudy .stairList .stairTree li .foricon span {
@@ -1346,6 +1392,14 @@ section {
     height: 50px;
   }
 }
+@media screen and (max-width: 991px) {
+  .caseStudy .stairList .stairTree li .foricon span {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
 .caseStudy .stairList .stairTree li .foricon span svg {
   width: 30px;
   fill: #2A56C2;
@@ -1353,6 +1407,11 @@ section {
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li .foricon span svg {
     width: 24px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .caseStudy .stairList .stairTree li .foricon span svg {
+    width: 22px;
   }
 }
 .caseStudy .stairList .stairTree li p {
@@ -1400,6 +1459,18 @@ section {
   opacity: 0.4;
 }
 @media screen and (max-width: 1440px) {
+  .trans-tabs .nav-tabs .nav-link {
+    font-size: 17px;
+    padding: 10px 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .trans-tabs .nav-tabs .nav-link {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
   .trans-tabs .nav-tabs .nav-link {
     font-size: 17px;
     padding: 10px 15px;
@@ -1491,6 +1562,11 @@ section {
 .aboutARCIS {
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .aboutARCIS::before {
+    display: none;
+  }
 }
 .aboutARCIS .aboutwraper {
   display: flex;
@@ -1959,6 +2035,11 @@ section {
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 991px) {
+  .contactBox::before {
+    display: none;
+  }
+}
 .contactBox h2 {
   margin: 30px 0;
   padding: 0;
@@ -1998,6 +2079,11 @@ footer {
 @media screen and (max-width: 1440px) {
   footer {
     padding: 60px 0 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  footer::before {
+    display: none;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2422,6 +2508,11 @@ footer::before {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 991px) {
+  .society::after {
+    display: none;
+  }
+}
 @media screen and (max-width: 767px) {
   .society {
     padding-top: 0px;
@@ -2543,6 +2634,11 @@ footer::before {
   background-color: #F5F5F5;
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .testimonialsHomepage::before {
+    display: none;
+  }
 }
 .testimonialsHomepage .testi-slider {
   position: relative;

@@ -561,5 +561,7 @@ for (const section of offerdslider) {
   });
 }
 
-
+function hamtoggle(x) {
+  x.classList.toggle("change");
+}
 
