@@ -480,6 +480,36 @@ for (const section of relslider) {
     }
   });
 }
+const brandslider = document.querySelectorAll(".brand-slider");
+for (const section of brandslider) {
+  const swiper = section.querySelector(".swiper");
+  new Swiper(swiper, {
+    loop: true,
+    lazyLoading: true,
+    autoplay: {
+      delay: 1000,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+      prevEl: section.querySelector(".carousel-control-left"),
+      nextEl: section.querySelector(".carousel-control-right")
+    },
+    breakpoints: {
+      0: {spaceBetween: 15,
+        slidesPerView: 2
+      },
+      567: {spaceBetween: 30,
+        slidesPerView: 3
+      },
+      992: {spaceBetween: 40,
+        slidesPerView: 5
+      }
+    }
+  });
+}
 const teslider = document.querySelectorAll(".team-expert-slider");
 for (const section of teslider) {
   const swiper = section.querySelector(".swiper");
