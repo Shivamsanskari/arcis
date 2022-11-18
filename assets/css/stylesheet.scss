@@ -906,6 +906,10 @@ section {
         margin-bottom: 20px;
     }
 
+    @media screen and (max-width:767px) {
+        text-align: center;
+    }
+
     &::after {
         position: absolute;
         bottom: 0;
@@ -918,6 +922,11 @@ section {
 
         @media screen and (max-width:1440px) {
             width: 50px;
+        }
+
+        @media screen and (max-width:767px) {
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
@@ -951,6 +960,9 @@ section {
     @media screen and (max-width:991px) {
         font-size: 20px;
         margin-bottom: 15px;
+    }
+    @media screen and (max-width:767px) {
+       text-align: center;
     }
 
     // &::after {
@@ -1006,8 +1018,17 @@ section {
             font-size: 22px;
         }
 
+        @media screen and (max-width:767px) {
+            margin: 10px 0;
+        }
+
         span {
             color: $blue-light;
+
+            @media screen and (max-width:767px) {
+                display: block;
+            }
+
         }
     }
 
@@ -1610,7 +1631,6 @@ section {
         .nav-link {
             color: $white;
             background: transparent !important;
-            border: none;
             border-top: 1px solid $white;
             border-radius: 0;
             margin-bottom: -2px;
@@ -1633,6 +1653,7 @@ section {
             @media screen and (max-width:767px) {
                 font-size: 17px;
                 padding: 10px 15px;
+                border: 1px solid transparent;
             }
 
             &.active,
@@ -1647,6 +1668,7 @@ section {
                     border: 1px solid $blue-light;
                     background: $blue-light !important;
                     color: $white;
+                    border-radius: 30px;
                 }
             }
         }
@@ -1667,6 +1689,10 @@ section {
 
     @media screen and (max-width:1440px) {
         padding: 8px 24px;
+    }
+
+    @media screen and (max-width:767px) {
+        margin: 20px 0;
     }
 
     &::before {
@@ -1727,6 +1753,10 @@ section {
         &:hover {
             color: $primary;
             border-color: $white;
+        }
+
+        @media screen and (max-width:767px) {
+            margin: 20px 0;
         }
     }
 }
@@ -1817,6 +1847,11 @@ section {
 
                 @media screen and (max-width:1440px) {
                     font-size: 22px;
+                }
+
+                @media screen and (max-width:767px) {
+                    text-align: center;
+                    margin: 20px;
                 }
             }
 
@@ -2119,6 +2154,10 @@ section {
         position: relative;
         margin-bottom: 30px;
 
+        @media screen and (max-width:767px) {
+            text-align: center;
+        }
+
         span {
             width: 70px;
             height: 70px;
@@ -2173,6 +2212,14 @@ section {
             -webkit-transform-origin: center center;
             transform-origin: center center;
             content: '';
+
+            @media screen and (max-width:1440px) {
+                right: 10%;
+            }
+
+            @media screen and (max-width:767px) {
+                display: none;
+            }
         }
 
         &.lastchild::after {
@@ -2210,6 +2257,10 @@ section {
 
             @media screen and (max-width:1440px) {
                 font-size: 24px;
+            }
+
+            @media screen and (max-width:767px) {
+                margin: 30px 0;
             }
         }
 
@@ -2446,6 +2497,9 @@ footer {
         @media screen and (max-width:1440px) {
             width: 100%;
         }
+        @media screen and (max-width:1440px) {
+            width: 70%;
+        }
     }
 
     .dropicon {
@@ -2509,6 +2563,11 @@ footer {
     @media screen and (max-width:1440px) {
         position: relative;
     }
+    @media screen and (max-width:767px) {
+       width: 100%;
+       bottom: 0;
+       margin-top: 30px;
+    }
 }
 
 .topfooter {
@@ -2533,13 +2592,10 @@ footer {
 
 .flogo {
     width: 220px;
-
     @media screen and(max-width:767px) {
         width: 135px;
         display: inline-block;
-        margin-bottom: 20px;
     }
-
     img {
         max-width: 100%;
     }
@@ -2557,6 +2613,9 @@ footer {
 }
 
 .sociallinks {
+    @media screen and(max-width:1440px) {
+        margin: 20px 0;
+    }
     li {
         display: inline-block;
         margin: 0 5px;
@@ -2721,10 +2780,6 @@ footer {
         }
     }
 
-    @media screen and (max-width:767px) {
-        padding-top: 0px;
-    }
-
     h2 {
         padding: 0;
     }
@@ -2790,6 +2845,14 @@ footer {
         margin-left: 20px;
         margin-bottom: 29px;
         padding: 0 0 0 20px;
+        @media screen and (max-width:767px) {
+            border: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            justify-content: space-between;
+        }
     }
 
     .societystats {
@@ -2854,6 +2917,10 @@ footer {
     .testi-slider {
         position: relative;
         padding-bottom: 80px;
+
+        @media screen and (max-width:767px) {
+            padding-bottom: 0px;
+        }
 
         .swiper-pagination {
             position: absolute;

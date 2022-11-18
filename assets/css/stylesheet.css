@@ -801,6 +801,11 @@ section {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .smallTopHeading {
+    text-align: center;
+  }
+}
 .smallTopHeading::after {
   position: absolute;
   bottom: 0;
@@ -814,6 +819,12 @@ section {
 @media screen and (max-width: 1440px) {
   .smallTopHeading::after {
     width: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .smallTopHeading::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .smallTopHeading.text-center::after {
@@ -847,6 +858,11 @@ section {
     margin-bottom: 15px;
   }
 }
+@media screen and (max-width: 767px) {
+  .sectionheading {
+    text-align: center;
+  }
+}
 
 .homeCountings {
   background: #E5E5E1;
@@ -873,8 +889,18 @@ section {
     font-size: 22px;
   }
 }
+@media screen and (max-width: 767px) {
+  .homeCountings h2 {
+    margin: 10px 0;
+  }
+}
 .homeCountings h2 span {
   color: #4958BF;
+}
+@media screen and (max-width: 767px) {
+  .homeCountings h2 span {
+    display: block;
+  }
 }
 @media screen and (max-width: 991px) {
   .homeCountings svg {
@@ -1448,7 +1474,6 @@ section {
 .trans-tabs .nav-tabs .nav-link {
   color: #FFFFFF;
   background: transparent !important;
-  border: none;
   border-top: 1px solid #FFFFFF;
   border-radius: 0;
   margin-bottom: -2px;
@@ -1474,6 +1499,7 @@ section {
   .trans-tabs .nav-tabs .nav-link {
     font-size: 17px;
     padding: 10px 15px;
+    border: 1px solid transparent;
   }
 }
 .trans-tabs .nav-tabs .nav-link.active, .trans-tabs .nav-tabs .nav-link:hover {
@@ -1488,6 +1514,7 @@ section {
     border: 1px solid #4958BF;
     background: #4958BF !important;
     color: #FFFFFF;
+    border-radius: 30px;
   }
 }
 
@@ -1506,6 +1533,11 @@ section {
 @media screen and (max-width: 1440px) {
   .clkbtn {
     padding: 8px 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .clkbtn {
+    margin: 20px 0;
   }
 }
 .clkbtn::before {
@@ -1557,6 +1589,11 @@ section {
 .clkbtn.whiteBtn:hover {
   color: #1E1E1E;
   border-color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .clkbtn.whiteBtn {
+    margin: 20px 0;
+  }
 }
 
 .aboutARCIS {
@@ -1648,6 +1685,12 @@ section {
 @media screen and (max-width: 1440px) {
   .aboutARCIS .aboutwraper .lefttabs h2 {
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .aboutARCIS .aboutwraper .lefttabs h2 {
+    text-align: center;
+    margin: 20px;
   }
 }
 .aboutARCIS .aboutwraper .lefttabs ul {
@@ -1942,6 +1985,11 @@ section {
   position: relative;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 767px) {
+  .aboutARCIS .societystats {
+    text-align: center;
+  }
+}
 .aboutARCIS .societystats span {
   width: 70px;
   height: 70px;
@@ -1993,6 +2041,16 @@ section {
   transform-origin: center center;
   content: "";
 }
+@media screen and (max-width: 1440px) {
+  .aboutARCIS .societystats::after {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .aboutARCIS .societystats::after {
+    display: none;
+  }
+}
 .aboutARCIS .societystats.lastchild::after {
   display: none;
 }
@@ -2024,6 +2082,11 @@ section {
 @media screen and (max-width: 1440px) {
   .futureBox .futureWrapper h2 {
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .futureBox .futureWrapper h2 {
+    margin: 30px 0;
   }
 }
 .futureBox .futureWrapper figure img {
@@ -2251,6 +2314,11 @@ footer::before {
     width: 100%;
   }
 }
+@media screen and (max-width: 1440px) {
+  .footermap img {
+    width: 70%;
+  }
+}
 .footermap .dropicon {
   position: absolute;
   top: 162px;
@@ -2312,6 +2380,13 @@ footer::before {
     position: relative;
   }
 }
+@media screen and (max-width: 767px) {
+  .copyright {
+    width: 100%;
+    bottom: 0;
+    margin-top: 30px;
+  }
+}
 
 .topfooter {
   display: flex;
@@ -2342,7 +2417,6 @@ footer::before {
   .flogo {
     width: 135px;
     display: inline-block;
-    margin-bottom: 20px;
   }
 }
 .flogo img {
@@ -2361,6 +2435,11 @@ footer::before {
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .sociallinks {
+    margin: 20px 0;
+  }
+}
 .sociallinks li {
   display: inline-block;
   margin: 0 5px;
@@ -2513,11 +2592,6 @@ footer::before {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
-  .society {
-    padding-top: 0px;
-  }
-}
 .society h2 {
   padding: 0;
 }
@@ -2584,6 +2658,16 @@ footer::before {
   margin-bottom: 29px;
   padding: 0 0 0 20px;
 }
+@media screen and (max-width: 767px) {
+  .society .socityStatsWrapper {
+    border: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: space-between;
+  }
+}
 .society .societystats {
   position: relative;
   margin-bottom: 30px;
@@ -2643,6 +2727,11 @@ footer::before {
 .testimonialsHomepage .testi-slider {
   position: relative;
   padding-bottom: 80px;
+}
+@media screen and (max-width: 767px) {
+  .testimonialsHomepage .testi-slider {
+    padding-bottom: 0px;
+  }
 }
 .testimonialsHomepage .testi-slider .swiper-pagination {
   position: absolute;
