@@ -32,8 +32,11 @@ for (const section of brandslider) {
   new Swiper(swiper, {
     loop: true,
     lazyLoading: true,
+    speed: 2000,
     autoplay: {
-      delay: 1000,
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     pagination: {
         el: '.swiper-pagination',
@@ -56,7 +59,6 @@ for (const section of brandslider) {
     }
   });
 }
-
 const relslider = document.querySelectorAll(".testi-slider");
 for (const section of relslider) {
   const swiper = section.querySelector(".swiper");

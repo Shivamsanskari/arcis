@@ -390,6 +390,7 @@ header.sticky .navbar-brand img.withoutsticky {
 }
 header.sticky .navbar-brand img.onsticky {
   display: block;
+  max-width: 184px;
 }
 header.sticky .navbar-nav.mainlinks li a {
   color: #1E1E1E;
@@ -1481,6 +1482,7 @@ section {
 .trans-tabs .nav-tabs .nav-link {
   color: #FFFFFF;
   background: transparent !important;
+  border: none;
   border-top: 1px solid #FFFFFF;
   border-radius: 0;
   margin-bottom: -2px;
@@ -1510,7 +1512,6 @@ section {
   }
 }
 .trans-tabs .nav-tabs .nav-link.active, .trans-tabs .nav-tabs .nav-link:hover {
-  border: none;
   background: transparent !important;
   color: #FFFFFF;
   border-top: 1px solid #FFFFFF;
@@ -2868,6 +2869,7 @@ footer::before {
   background: #FFFFFF;
   padding: 30px;
   text-align: center;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.0784313725);
 }
 .testiwraper h3 {
   font-family: "Inter", sans-serif;
