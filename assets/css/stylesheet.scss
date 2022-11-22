@@ -1304,6 +1304,11 @@ section {
             }
         }
     }
+    .brand-slider{
+        .swiper-wrapper{
+            transition-timing-function: linear!important; 
+        }
+    }
 
     &::after {
         position: absolute;

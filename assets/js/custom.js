@@ -32,7 +32,7 @@ for (const section of brandslider) {
   new Swiper(swiper, {
     loop: true,
     lazyLoading: true,
-    speed: 2000,
+    speed: 3000,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
@@ -53,7 +53,7 @@ for (const section of brandslider) {
       567: {spaceBetween: 30,
         slidesPerView: 3
       },
-      992: {spaceBetween: 40,
+      992: {spaceBetween: 0,
         slidesPerView: 5
       }
     }

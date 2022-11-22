@@ -1178,6 +1178,9 @@ section {
 .clients .brandwraper figure img:hover {
   filter: none;
 }
+.clients .brand-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
 .clients::after {
   position: absolute;
   width: 400px;
