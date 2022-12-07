@@ -554,9 +554,10 @@ header {
 
         .bannerbtn {
             color: $white;
-            background: $blue-light;
+            background: transparent;
+            border: 1px solid $white;
             border-radius: 35px;
-            padding: 17px 32px;
+            padding: 16px 28px;
             font-weight: 500;
             font-size: 20px;
             margin-top: 10px;
@@ -574,7 +575,7 @@ header {
             }
 
             &::before {
-                background: $white;
+                background: $blue-light;
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -592,13 +593,17 @@ header {
             }
 
             &:hover {
+                border: 1px solid $blue-light;
+
                 &::before {
                     left: 0;
                 }
 
                 span {
-                    color: $primary;
+                    color: $white;
+
                 }
+
             }
         }
     }
@@ -973,6 +978,18 @@ section {
     overflow: hidden;
     position: relative;
 
+    .smallTopHeading {
+        margin-bottom: 90px;
+
+        @media screen and (max-width:991px) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+        }
+    }
+
     @media screen and (max-width:991px) {
         &::before {
             display: none;
@@ -1304,9 +1321,10 @@ section {
             }
         }
     }
-    .brand-slider{
-        .swiper-wrapper{
-            transition-timing-function: linear!important; 
+
+    .brand-slider {
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
         }
     }
 
@@ -1626,6 +1644,7 @@ section {
             margin-right: 10px;
             font-size: 20px;
             opacity: 0.4;
+
             @media screen and (max-width:1440px) {
                 font-size: 17px;
                 padding: 10px 15px;
@@ -1648,6 +1667,7 @@ section {
                 color: $white;
                 border-top: 1px solid $white;
                 opacity: 1;
+
                 @media screen and (max-width:767px) {
                     border: 1px solid $blue-light;
                     background: $blue-light !important;
@@ -2562,17 +2582,16 @@ footer {
     }
 }
 
-.copyright {
-    margin: 0;
-    font-size: 13px;
+.copy{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
     color: #bbb;
-    border-top: 1px solid rgba(230, 230, 230, 0.35);
-    padding-top: 20px;
-    display: inline-block;
-    bottom: 30px;
+    border-top: 1px solid #E6E6E6;
     width: 66%;
-    position: absolute;
-
+    font-size: 13px;
+    margin: 0;
     @media screen and (max-width:1440px) {
         position: relative;
     }
@@ -2583,6 +2602,18 @@ footer {
         margin-top: 30px;
     }
 }
+// .copyright {
+
+
+
+//     border-top: 1px solid rgba(230, 230, 230, 0.35);
+//     padding-top: 20px;
+//     display: inline-block;
+//     bottom: 30px;
+//     width: 66%;
+//     position: absolute;
+
+// }
 
 .topfooter {
     display: flex;
@@ -2786,10 +2817,11 @@ footer {
 }
 
 .society {
-    background: url("../images/socitybg.png") center center no-repeat;
+    background: url("../images/socitybg.jpg") center center no-repeat;
     background-size: cover;
     overflow: hidden;
     position: relative;
+    color: $white;
 
     @media screen and (max-width:991px) {
         &::after {
@@ -2839,11 +2871,7 @@ footer {
     }
 
     .societyimg {
-        width: 170%;
-        margin-left: -70%;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        max-width: initial;
+        max-width: 100%;
 
         @media screen and (max-width:991px) {
             width: 100%;
@@ -2853,12 +2881,12 @@ footer {
         }
 
         @media screen and (max-width:991px) {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
     }
 
     .socityStatsWrapper {
-        border-left: 2px dashed #535356;
+        border-left: 2px dashed rgba(255, 255, 255, .79);
         margin-left: 20px;
         margin-bottom: 29px;
         padding: 0 0 0 20px;
@@ -2902,7 +2930,7 @@ footer {
 
         h3 {
             font-size: 30px;
-            color: $blue-light;
+            color: $white;
             margin: 10px 0 5px;
 
             @media screen and (max-width:1440px) {
@@ -2912,7 +2940,7 @@ footer {
 
         p {
             font-size: 15px;
-            color: $primary;
+            color: $white;
             margin: 0;
 
             @media screen and (max-width:1440px) {
@@ -2935,12 +2963,15 @@ footer {
 
     .testi-slider {
         position: relative;
+
         @media screen and (max-width:767px) {
             padding-bottom: 0px;
         }
-        .swiper{
+
+        .swiper {
             padding-bottom: 75px;
         }
+
         .swiper-pagination {
             position: absolute;
             left: 50%;
@@ -2976,6 +3007,7 @@ footer {
                 }
             }
         }
+
         .carousel-control {
             width: 40px;
             height: 40px;
@@ -3043,6 +3075,7 @@ footer {
     padding: 30px;
     text-align: center;
     box-shadow: 0px 4px 32px #00000014;
+
     h3 {
         font-family: $inter;
         font-size: 14px;
