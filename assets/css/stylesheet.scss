@@ -1669,7 +1669,7 @@ header {
                 overflow: hidden;
                 position: absolute;
                 bottom: -4px;
-                width: 80%;
+                width: 85%;
 
                 @media screen and (max-width:1440px) {
                     height: 2px;
@@ -3779,7 +3779,7 @@ footer {
     overflow: hidden;
     position: relative;
     color: $white;
-
+    padding: 40px 0 !important;
     @media screen and (max-width:991px) {
         &::after {
             display: none;

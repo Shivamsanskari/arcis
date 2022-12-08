@@ -1545,7 +1545,7 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
   overflow: hidden;
   position: absolute;
   bottom: -4px;
-  width: 80%;
+  width: 85%;
 }
 @media screen and (max-width: 1440px) {
   .homebanner .carousel-indicators button span {
@@ -3576,6 +3576,7 @@ footer::before {
   overflow: hidden;
   position: relative;
   color: #FFFFFF;
+  padding: 40px 0 !important;
 }
 @media screen and (max-width: 991px) {
   .society::after {
