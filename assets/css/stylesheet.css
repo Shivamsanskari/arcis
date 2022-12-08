@@ -410,8 +410,7 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
   background-color: #000000;
 }
 
-.linkmegamenu,
-.linkmegamenusearve,
+.link-services, .link-industry, .link-casestudy,
 .mainmegamenu {
   position: fixed;
   display: flex;
@@ -426,21 +425,18 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
   opacity: 0;
 }
 @media screen and (max-width: 1440px) {
-  .linkmegamenu,
-.linkmegamenusearve,
+  .link-services, .link-industry, .link-casestudy,
 .mainmegamenu {
     height: calc(100vh - 54px);
   }
 }
 @media screen and (max-width: 767px) {
-  .linkmegamenu,
-.linkmegamenusearve,
+  .link-services, .link-industry, .link-casestudy,
 .mainmegamenu {
     height: calc(100vh - 46px);
   }
 }
-.linkmegamenu .megamenuicon,
-.linkmegamenusearve .megamenuicon,
+.link-services .megamenuicon, .link-industry .megamenuicon, .link-casestudy .megamenuicon,
 .mainmegamenu .megamenuicon {
   position: absolute;
   bottom: 30px;
@@ -449,14 +445,12 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
   z-index: 99;
 }
 @media screen and (max-width: 1440px) {
-  .linkmegamenu .megamenuicon,
-.linkmegamenusearve .megamenuicon,
+  .link-services .megamenuicon, .link-industry .megamenuicon, .link-casestudy .megamenuicon,
 .mainmegamenu .megamenuicon {
     width: 100px;
   }
 }
-.linkmegamenu .closelinkmenu,
-.linkmegamenusearve .closelinkmenu,
+.link-services .closelinkmenu, .link-industry .closelinkmenu, .link-casestudy .closelinkmenu,
 .mainmegamenu .closelinkmenu {
   position: absolute;
   top: 30px;
@@ -467,25 +461,21 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
   border-radius: 50%;
   overflow: hidden;
 }
-.linkmegamenu .closelinkmenu svg,
-.linkmegamenusearve .closelinkmenu svg,
+.link-services .closelinkmenu svg, .link-industry .closelinkmenu svg, .link-casestudy .closelinkmenu svg,
 .mainmegamenu .closelinkmenu svg {
   width: 40px;
 }
 @media screen and (max-width: 1440px) {
-  .linkmegamenu .closelinkmenu svg,
-.linkmegamenusearve .closelinkmenu svg,
+  .link-services .closelinkmenu svg, .link-industry .closelinkmenu svg, .link-casestudy .closelinkmenu svg,
 .mainmegamenu .closelinkmenu svg {
     width: 33px;
   }
 }
-.linkmegamenu .closelinkmenu:hover,
-.linkmegamenusearve .closelinkmenu:hover,
+.link-services .closelinkmenu:hover, .link-industry .closelinkmenu:hover, .link-casestudy .closelinkmenu:hover,
 .mainmegamenu .closelinkmenu:hover {
   transform: rotate(180deg);
 }
-.linkmegamenu.opened,
-.linkmegamenusearve.opened,
+.link-services.opened, .link-industry.opened, .link-casestudy.opened,
 .mainmegamenu.opened {
   top: 63px;
   opacity: 1;
