@@ -67,6 +67,21 @@ body.hiddenoverflow {
   overflow: hidden;
 }
 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #464C65;
+}
+
 .container-fluid {
   padding: 0 30px;
 }
@@ -444,7 +459,7 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
 .linkmegamenusearve .closelinkmenu,
 .mainmegamenu .closelinkmenu {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   z-index: 2;
   cursor: pointer;
@@ -891,6 +906,7 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
 }
 .mainmenuwraper ul li ul li {
   width: 100%;
+  border: none;
 }
 @media screen and (max-width: 991px) {
   .mainmenuwraper ul li ul li {
@@ -934,6 +950,7 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
   display: block;
   opacity: 1;
   padding: 0;
+  padding-top: 50px;
   position: relative;
   min-height: auto;
 }
@@ -976,6 +993,19 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
 }
 .mainmenuwraper ul li ul.sociallinks li a:hover {
   background: #FFCC00;
+}
+.mainmenuwraper ul li > a.active {
+  background: #4958BF;
+}
+.mainmenuwraper ul li > a.active::before {
+  opacity: 1;
+}
+.mainmenuwraper ul li > a.active + span + ul {
+  display: block !important;
+  z-index: 5;
+}
+.mainmenuwraper ul li > a.active + span + ul > li:first-child() {
+  background: #4958BF;
 }
 .mainmenuwraper ul li:hover > a {
   background: #4958BF;
@@ -1525,7 +1555,7 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
   overflow: hidden;
   position: absolute;
   bottom: -4px;
-  width: 100%;
+  width: 80%;
 }
 @media screen and (max-width: 1440px) {
   .homebanner .carousel-indicators button span {
