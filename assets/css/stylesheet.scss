@@ -408,7 +408,6 @@ header {
 
             img.onsticky {
                 display: block;
-                max-width: 184px;
             }
         }
 
@@ -1834,11 +1833,11 @@ section {
     padding: 100px 0;
 
     @media screen and (max-width:1440px) {
-        padding: 75px 0;
+        padding: 70px 0;
     }
 
     @media screen and (max-width:1199px) {
-        padding: 65px 0;
+        padding: 60px 0;
     }
 
     @media screen and (max-width:767px) {
@@ -1933,11 +1932,11 @@ section {
         font-weight: bold;
 
         @media screen and (max-width:1440px) {
-            font-size: 28px;
+            font-size: 22px;
         }
 
         @media screen and (max-width:991px) {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         @media screen and (max-width:767px) {
@@ -1955,10 +1954,13 @@ section {
     }
 
     svg {
-        height: 50px;
+        height: 40px;
 
-        @media screen and (max-width:991px) {
-            height: 36px;
+        @media screen and (max-width:1440px) {
+            height: 30px;
+        }
+        @media screen and (max-width:767px) {
+            height: 25px;
         }
     }
 
@@ -1968,12 +1970,18 @@ section {
         height: 120px;
         width: 120px;
         border-radius: 50%;
-        top: 20%;
+        top: 30px;
         left: 50%;
         transform: translateX(-50%);
         background: #DEDEDC;
         z-index: -1;
+        @media screen and (max-width:1440px) {
+            height: 100px;
+            width: 100px;
+            top: 25px;
+        }
     }
+
 }
 
 .homeCountings {
@@ -1984,6 +1992,9 @@ section {
     .smallTopHeading {
         margin-bottom: 90px;
 
+        @media screen and (max-width:1440px) {
+            margin-bottom: 50px;
+        }
         @media screen and (max-width:991px) {
             margin-bottom: 40px;
         }
@@ -2456,7 +2467,7 @@ section {
                 padding-left: 40px;
 
                 @media screen and (max-width:1440px) {
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
                 }
 
                 @media screen and (max-width:991px) {
@@ -2478,11 +2489,11 @@ section {
                     content: '';
 
                     @media screen and (max-width:1440px) {
-                        top: 30px;
+                        top: 25px;
                     }
 
                     @media screen and (max-width:991px) {
-                        top: 25px;
+                        top: 20px;
                     }
                 }
 
@@ -2496,11 +2507,11 @@ section {
                     content: '';
 
                     @media screen and (max-width:1440px) {
-                        top: 34px;
+                        top: 29px;
                     }
 
                     @media screen and (max-width:991px) {
-                        top: 29px;
+                        top: 24px;
                         width: 30px;
                     }
                 }
@@ -2517,11 +2528,11 @@ section {
                         height: 90px;
 
                         @media screen and (max-width:1440px) {
-                            height: 70px;
+                            height: 60px;
                         }
 
                         @media screen and (max-width:991px) {
-                            height: 60px;
+                            height: 50px;
                         }
                     }
 
@@ -2540,15 +2551,15 @@ section {
                         @media screen and (max-width:1440px) {
                             top: 10px;
                             right: 10px;
-                            width: 50px;
-                            height: 50px;
+                            width: 40px;
+                            height: 40px;
                         }
 
                         @media screen and (max-width:991px) {
                             top: 10px;
                             right: 10px;
-                            width: 40px;
-                            height: 40px;
+                            width: 30px;
+                            height: 30px;
                         }
 
                         svg {
@@ -2556,11 +2567,11 @@ section {
                             fill: $blue;
 
                             @media screen and (max-width:1440px) {
-                                width: 24px;
+                                width: 20px;
                             }
 
                             @media screen and (max-width:991px) {
-                                width: 22px;
+                                width: 16px;
                             }
                         }
 
@@ -2573,7 +2584,7 @@ section {
                     color: $white;
 
                     @media screen and (max-width:1440px) {
-                        font-size: 16px;
+                        font-size: 15px;
                     }
 
                     span {
@@ -2978,7 +2989,7 @@ section {
             }
 
             @media screen and (max-width:767px) {
-                padding: 50px 15px;
+                padding: 20px 15px;
                 width: 100%;
             }
 
@@ -3235,7 +3246,7 @@ section {
 
             p {
                 @media screen and (max-width:991px) {
-                    width: 110%;
+                    width: 120%;
                     font-size: 14px;
                 }
 
@@ -3499,7 +3510,10 @@ footer {
             width: 100%;
         }
 
-        @media screen and (max-width:1440px) {
+        @media screen and (max-width:991px) {
+            width: 80%;
+        }
+        @media screen and (max-width:767px) {
             width: 70%;
         }
     }
@@ -3557,22 +3571,26 @@ footer {
     justify-content: space-between;
     padding-top: 16px;
     color: #bbb;
-    border-top: 1px solid #E6E6E6;
+    border-top: 1px solid #767993;
     width: 66%;
     font-size: 13px;
-    margin: 0;
-
-    @media screen and (min-width:1600px) {
-        margin-top: -80px;
-    }
+    margin: 0; 
+    margin-top: -80px;
     @media screen and (max-width:1440px) {
         position: relative;
+        margin-top: -40px;
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:991px) {
         width: 100%;
         bottom: 0;
         margin-top: 30px;
+    }
+    p{margin: 0;}
+    img{        
+        @media screen and (max-width:991px) {
+           width: 90px;
+        }
     }
 }
 
@@ -3595,7 +3613,13 @@ footer {
         padding: 0;
     }
 }
+.footerleft{
+    @media screen and(max-width:991px) {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
+}
 .flogo {
     width: 220px;
 
@@ -3932,6 +3956,9 @@ footer {
 
         .swiper {
             padding-bottom: 75px;
+            @media screen and (max-width:1440px) {
+                padding-bottom: 60px;
+            }
         }
 
         .swiper-pagination {
@@ -4037,6 +4064,9 @@ footer {
     padding: 30px;
     text-align: center;
     box-shadow: 0px 4px 32px #00000014;
+    @media screen and (max-width:1440px) {
+        padding: 30px 15px;
+    }
 
     h3 {
         font-family: $inter;

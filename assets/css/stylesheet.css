@@ -372,7 +372,6 @@ header.sticky .navbar-brand img.withoutsticky {
 }
 header.sticky .navbar-brand img.onsticky {
   display: block;
-  max-width: 184px;
 }
 header.sticky .navbar-nav.mainlinks li a {
   color: #1E1E1E;
@@ -1705,12 +1704,12 @@ section {
 }
 @media screen and (max-width: 1440px) {
   section {
-    padding: 75px 0;
+    padding: 70px 0;
   }
 }
 @media screen and (max-width: 1199px) {
   section {
-    padding: 65px 0;
+    padding: 60px 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1810,12 +1809,12 @@ section {
 }
 @media screen and (max-width: 1440px) {
   .countings-wrapper h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 991px) {
   .countings-wrapper h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1832,11 +1831,16 @@ section {
   }
 }
 .countings-wrapper svg {
-  height: 50px;
+  height: 40px;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1440px) {
   .countings-wrapper svg {
-    height: 36px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .countings-wrapper svg {
+    height: 25px;
   }
 }
 .countings-wrapper::before {
@@ -1845,11 +1849,18 @@ section {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  top: 20%;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   background: #DEDEDC;
   z-index: -1;
+}
+@media screen and (max-width: 1440px) {
+  .countings-wrapper::before {
+    height: 100px;
+    width: 100px;
+    top: 25px;
+  }
 }
 
 .homeCountings {
@@ -1859,6 +1870,11 @@ section {
 }
 .homeCountings .smallTopHeading {
   margin-bottom: 90px;
+}
+@media screen and (max-width: 1440px) {
+  .homeCountings .smallTopHeading {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 991px) {
   .homeCountings .smallTopHeading {
@@ -2303,7 +2319,7 @@ section {
 }
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -2326,12 +2342,12 @@ section {
 }
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li::before {
-    top: 30px;
+    top: 25px;
   }
 }
 @media screen and (max-width: 991px) {
   .caseStudy .stairList .stairTree li::before {
-    top: 25px;
+    top: 20px;
   }
 }
 .caseStudy .stairList .stairTree li::after {
@@ -2345,12 +2361,12 @@ section {
 }
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li::after {
-    top: 34px;
+    top: 29px;
   }
 }
 @media screen and (max-width: 991px) {
   .caseStudy .stairList .stairTree li::after {
-    top: 29px;
+    top: 24px;
     width: 30px;
   }
 }
@@ -2368,12 +2384,12 @@ section {
 }
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li .foricon img {
-    height: 70px;
+    height: 60px;
   }
 }
 @media screen and (max-width: 991px) {
   .caseStudy .stairList .stairTree li .foricon img {
-    height: 60px;
+    height: 50px;
   }
 }
 .caseStudy .stairList .stairTree li .foricon span {
@@ -2392,16 +2408,16 @@ section {
   .caseStudy .stairList .stairTree li .foricon span {
     top: 10px;
     right: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media screen and (max-width: 991px) {
   .caseStudy .stairList .stairTree li .foricon span {
     top: 10px;
     right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 }
 .caseStudy .stairList .stairTree li .foricon span svg {
@@ -2410,12 +2426,12 @@ section {
 }
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li .foricon span svg {
-    width: 24px;
+    width: 20px;
   }
 }
 @media screen and (max-width: 991px) {
   .caseStudy .stairList .stairTree li .foricon span svg {
-    width: 22px;
+    width: 16px;
   }
 }
 .caseStudy .stairList .stairTree li p {
@@ -2425,7 +2441,7 @@ section {
 }
 @media screen and (max-width: 1440px) {
   .caseStudy .stairList .stairTree li p {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 .caseStudy .stairList .stairTree li p span {
@@ -2824,7 +2840,7 @@ section {
 }
 @media screen and (max-width: 767px) {
   .aboutARCIS .aboutwraper .aboutcontent {
-    padding: 50px 15px;
+    padding: 20px 15px;
     width: 100%;
   }
 }
@@ -3067,7 +3083,7 @@ section {
 }
 @media screen and (max-width: 991px) {
   .futureBox .futureWrapper .leftBox p {
-    width: 110%;
+    width: 120%;
     font-size: 14px;
   }
 }
@@ -3324,7 +3340,12 @@ footer::before {
     width: 100%;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 991px) {
+  .footermap img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
   .footermap img {
     width: 70%;
   }
@@ -3380,26 +3401,31 @@ footer::before {
   justify-content: space-between;
   padding-top: 16px;
   color: #bbb;
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #767993;
   width: 66%;
   font-size: 13px;
   margin: 0;
-}
-@media screen and (min-width: 1600px) {
-  .copy {
-    margin-top: -80px;
-  }
+  margin-top: -80px;
 }
 @media screen and (max-width: 1440px) {
   .copy {
     position: relative;
+    margin-top: -40px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .copy {
     width: 100%;
     bottom: 0;
     margin-top: 30px;
+  }
+}
+.copy p {
+  margin: 0;
+}
+@media screen and (max-width: 991px) {
+  .copy img {
+    width: 90px;
   }
 }
 
@@ -3422,6 +3448,13 @@ footer::before {
     display: block;
     border: none;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footerleft {
+    text-align: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -3749,6 +3782,11 @@ footer::before {
 .testimonialsHomepage .testi-slider .swiper {
   padding-bottom: 75px;
 }
+@media screen and (max-width: 1440px) {
+  .testimonialsHomepage .testi-slider .swiper {
+    padding-bottom: 60px;
+  }
+}
 .testimonialsHomepage .testi-slider .swiper-pagination {
   position: absolute;
   left: 50%;
@@ -3843,6 +3881,11 @@ footer::before {
   padding: 30px;
   text-align: center;
   box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.0784313725);
+}
+@media screen and (max-width: 1440px) {
+  .testiwraper {
+    padding: 30px 15px;
+  }
 }
 .testiwraper h3 {
   font-family: "Inter", sans-serif;

@@ -1,5 +1,8 @@
 $(function() { 
   AOS.init();
+  $('.homepagecarousel').carousel({
+    pause: "false"
+  });
 });
 
 
@@ -114,6 +117,10 @@ for (const section of teamleadslider) {
   });
 }
 
+
+$(document).on('click','.carousel-indicators', function(){
+  $('#carouselExampleIndicators').carousel('pause');
+});
 // Mega Menu JS
 
 $(document).on('click','.backtoparent', function(){
@@ -125,7 +132,7 @@ $(document).on('click','.lefttabs ul li a', function(){
   $('.'+callbox).removeClass('d-none').siblings().addClass('d-none');
 });
 $(document).on('click','.openmenu', function(){ 
-  if($('.openindustry').hasClass('activelink') || $('.openservices').hasClass('activelink')){
+  if($('.openindustry').hasClass('activelink') || $('.openservices').hasClass('activelink') || $('.opencasestudy').hasClass('activelink')){
     if ($(window).scrollTop() < 200) {
       $('header').addClass('sticky');
     } else {
@@ -141,9 +148,9 @@ $(document).on('click','.openmenu', function(){
   }
   $('.mainmegamenu').toggleClass('opened');
   $(this).toggleClass('opened');
-  $('.link-services,.link-industry,.searchwraper').removeClass('opened');
+  $('.link-services,.link-industry,.link-casestudy,.searchwraper').removeClass('opened');
   $('.mainlinks').find('li').removeClass('active');
-  $('.openindustry,.openservices').removeClass('activelink');
+  $('.openindustry,.openservices,.opencasestudy').removeClass('activelink');
 });
 
 $(document).on('click','.opensearch', function(){
@@ -168,17 +175,25 @@ $(document).on('click','.openservices', function(){
         $('header').addClass('sticky');
       }
     } else{
-      if ($(window).scrollTop() < 200) {
-        $('header').toggleClass('sticky');
-      } else {
-        $('header').addClass('sticky');
+      if($('.opencasestudy').hasClass('activelink')){
+        if ($(window).scrollTop() < 200) {
+          $('header').addClass('sticky');
+        } else {
+          $('header').addClass('sticky');
+        }
+      } else{
+        if ($(window).scrollTop() < 200) {
+          $('header').toggleClass('sticky');
+        } else {
+          $('header').addClass('sticky');
+        }
+        $('body').toggleClass('hiddenoverflow');
       }
-      $('body').toggleClass('hiddenoverflow');
     }
   }
   $('.link-services').toggleClass('opened');
-  $('.mainmegamenu, .link-industry, .openmenu,.searchwraper').removeClass('opened');
-  $('.openindustry').removeClass('activelink');
+  $('.mainmegamenu, .link-industry,.link-casestudy, .openmenu,.searchwraper').removeClass('opened');
+  $('.openindustry,.opencasestudy').removeClass('activelink');
   // $('.whoweservemenu').addClass('d-none');
   // $('.whatweoffermenu').removeClass('d-none');
 });
@@ -198,21 +213,72 @@ $(document).on('click','.openindustry', function(){
         $('header').addClass('sticky');
       }
     } else{
-      if ($(window).scrollTop() < 200) {
-        $('header').toggleClass('sticky');
-      } else {
-        $('header').addClass('sticky');
+      if($('.opencasestudy').hasClass('activelink')){
+        if ($(window).scrollTop() < 200) {
+          $('header').addClass('sticky');
+        } else {
+          $('header').addClass('sticky');
+        }
+      } else{
+        if ($(window).scrollTop() < 200) {
+          $('header').toggleClass('sticky');
+        } else {
+          $('header').addClass('sticky');
+        }
+        $('body').toggleClass('hiddenoverflow');
       }
-      $('body').toggleClass('hiddenoverflow');
     }
+    
 
   }
   $('.link-industry').toggleClass('opened');
-  $('.mainmegamenu, .link-services, .openmenu,.searchwraper').removeClass('opened');
-  $('.openservices').removeClass('activelink');
+  $('.mainmegamenu, .link-services, .link-casestudy, .openmenu,.searchwraper').removeClass('opened');
+  $('.openservices,.opencasestudy').removeClass('activelink');
   // $('.whoweservemenu').removeClass('d-none');
   // $('.whatweoffermenu').addClass('d-none');
 });
+
+// Code for Case study
+$(document).on('click','.opencasestudy', function(){
+  $(this).toggleClass('activelink').parent().toggleClass('active').siblings().removeClass('active');
+  if($('.openmenu').hasClass('opened')){ 
+    if ($(window).scrollTop() < 200) {
+      $('header').addClass('sticky');
+    } else {
+      $('header').addClass('sticky');
+    }  
+  } else{  
+    if($('.openservices').hasClass('activelink')){
+      if ($(window).scrollTop() < 200) {
+        $('header').addClass('sticky');
+      } else {
+        $('header').addClass('sticky');
+      }
+    } else{
+      if($('.opencasestudy').hasClass('activelink')){
+        if ($(window).scrollTop() < 200) {
+          $('header').addClass('sticky');
+        } else {
+          $('header').addClass('sticky');
+        }
+      } else{
+        if ($(window).scrollTop() < 200) {
+          $('header').toggleClass('sticky');
+        } else {
+          $('header').addClass('sticky');
+        }
+        $('body').toggleClass('hiddenoverflow');
+      }
+    }
+
+  }
+  $('.link-casestudy').toggleClass('opened');
+  $('.mainmegamenu, .link-services, .link-industry, .openmenu,.searchwraper').removeClass('opened');
+  $('.openservices,.openindustry').removeClass('activelink');
+  // $('.whoweservemenu').removeClass('d-none');
+  // $('.whatweoffermenu').addClass('d-none');
+});
+
 
 $(document).on('click','.closelinkmenu', function(){
   if ($(window).scrollTop() > 200) {
@@ -222,8 +288,8 @@ $(document).on('click','.closelinkmenu', function(){
   }
   $('.mainlinks').find('li').removeClass('active');
   $('body').removeClass('hiddenoverflow');
-  $('.link-services,.link-industry').removeClass('opened');
-  $('.openservices,.openindustry').removeClass('activelink');
+  $('.link-services,.link-industry,.link-casestudy').removeClass('opened');
+  $('.openservices,.openindustry,.opencasestudy').removeClass('activelink');
 });
 
 $(document).on('click','#backtotop', function(e){
