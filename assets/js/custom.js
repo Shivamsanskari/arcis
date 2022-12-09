@@ -87,6 +87,33 @@ for (const section of relslider) {
   });
 }
 
+const teamleadslider = document.querySelectorAll(".member-slider");
+for (const section of teamleadslider) {
+  const swiper = section.querySelector(".swiper");
+  new Swiper(swiper, {
+    loop: false,
+    lazyLoading: true,
+    navigation: {
+      prevEl: section.querySelector(".carousel-control-left"),
+      nextEl: section.querySelector(".carousel-control-right")
+    },
+    breakpoints: {
+      0: {spaceBetween: 10,
+        slidesPerView: 1.3
+      },
+      567: {spaceBetween: 20,
+        slidesPerView: 1.7
+      },
+      992: {spaceBetween: 20,
+        slidesPerView: 2.7
+      },
+      1441: {spaceBetween: 20,
+        slidesPerView: 3.5
+      }
+    }
+  });
+}
+
 // Mega Menu CSS
 
 $(document).on('click','.backtoparent', function(){
