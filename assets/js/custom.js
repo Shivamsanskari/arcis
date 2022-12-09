@@ -114,7 +114,7 @@ for (const section of teamleadslider) {
   });
 }
 
-// Mega Menu CSS
+// Mega Menu JS
 
 $(document).on('click','.backtoparent', function(){
   $(this).parent().parent('li').removeClass('opened');
