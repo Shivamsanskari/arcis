@@ -87,23 +87,6 @@ body {
     }
 }
 
-// Hide Scrollbar CSS
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #464C65;
-}
-
-
 .container-fluid {
     padding: 0 30px;
 
@@ -478,7 +461,9 @@ header {
 
 // Mega Menu Links CSS
 
-.link-services,.link-industry,.link-casestudy,
+.link-services,
+.link-industry,
+.link-casestudy,
 .mainmegamenu {
     position: fixed;
     display: flex;
@@ -1939,32 +1924,12 @@ section {
     }
 }
 
-.homeCountings {
-    background: $gray;
-    overflow: hidden;
+.countings-wrapper {
     position: relative;
-
-    .smallTopHeading {
-        margin-bottom: 90px;
-
-        @media screen and (max-width:991px) {
-            margin-bottom: 40px;
-        }
-
-        @media screen and (max-width:767px) {
-            margin-bottom: 30px;
-        }
-    }
-
-    @media screen and (max-width:991px) {
-        &::before {
-            display: none;
-        }
-    }
 
     h2 {
         font-size: 36px;
-        margin: 17px 0;
+        margin: 10px 0;
         font-weight: bold;
 
         @media screen and (max-width:1440px) {
@@ -1997,7 +1962,43 @@ section {
         }
     }
 
-    // Circle Code
+    &::before {
+        content: '';
+        position: absolute;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #DEDEDC;
+        z-index: -1;
+    }
+}
+
+.homeCountings {
+    background: $gray;
+    overflow: hidden;
+    position: relative;
+
+    .smallTopHeading {
+        margin-bottom: 90px;
+
+        @media screen and (max-width:991px) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width:991px) {
+        &::before {
+            display: none;
+        }
+    }
+
     &::before {
         position: absolute;
         width: 400px;
@@ -3780,6 +3781,7 @@ footer {
     position: relative;
     color: $white;
     padding: 40px 0 !important;
+
     @media screen and (max-width:991px) {
         &::after {
             display: none;
