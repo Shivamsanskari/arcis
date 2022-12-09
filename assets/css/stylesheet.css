@@ -3385,6 +3385,11 @@ footer::before {
   font-size: 13px;
   margin: 0;
 }
+@media screen and (min-width: 1600px) {
+  .copy {
+    margin-top: -80px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .copy {
     position: relative;
