@@ -3907,4 +3907,142 @@ footer::before {
     font-size: 16px;
     min-height: 200px;
   }
+}
+
+.banner-top {
+  position: relative;
+  overflow: hidden;
+}
+.banner-top .bannercaption {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+@media screen and (max-width: 1199px) {
+  .banner-top .bannercaption {
+    top: 55%;
+  }
+}
+.banner-top .bannercaption .bannertitle {
+  color: #FFFFFF;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+@media screen and (max-width: 1440px) {
+  .banner-top .bannercaption .bannertitle {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .banner-top .bannercaption .bannertitle {
+    font-size: 13px;
+  }
+}
+.banner-top .bannercaption h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 5px;
+  position: relative;
+}
+@media screen and (max-width: 1440px) {
+  .banner-top .bannercaption h1 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-top .bannercaption h1 {
+    font-size: 18px;
+  }
+}
+.banner-top .bannercaption h1::after {
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 60px;
+  background: #FFFFFF;
+  content: "";
+  left: 0;
+}
+.banner-top .bannercaption p {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1440px) {
+  .banner-top .bannercaption p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .banner-top .bannercaption p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-top .bannercaption p {
+    font-size: 13px;
+  }
+}
+.banner-top .bannercaption .clkbtn {
+  margin-top: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .banner-top .bannercaption .clkbtn {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .banner-top img {
+    width: 150% !important;
+    margin-left: -25%;
+    max-width: none !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-top img {
+    width: 300% !important;
+    margin-left: -50%;
+  }
+}
+.banner-top .bannercaption {
+  max-width: 700px;
+}
+@media screen and (max-width: 1440px) {
+  .banner-top .bannercaption {
+    max-width: 530px;
+  }
+}
+.banner-top .bannercaption h1 {
+  margin-bottom: 0px;
+}
+.banner-top .bannercaption h1::after {
+  display: none;
+}
+.banner-top .bannercaption p {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1440px) {
+  .banner-top .bannercaption p {
+    font-size: 15px;
+  }
+}
+.banner-top .bannercaption .clkbtn {
+  margin-top: 10px;
+}
+
+.aboutUs {
+  text-align: center;
+}
+.aboutUs .smallTopHeading {
+  margin-bottom: 24px;
+}
+.aboutUs .sectionheading {
+  margin-bottom: 50px;
 }/*# sourceMappingURL=stylesheet.css.map */
