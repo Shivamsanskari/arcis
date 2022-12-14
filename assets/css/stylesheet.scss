@@ -520,7 +520,7 @@ header {
     }
 
     &.opened {
-        top: 63px;
+        top: 50px;
         opacity: 1;
     }
 }
@@ -1925,7 +1925,9 @@ section {
 
 .countings-wrapper {
     position: relative;
-
+    @media screen and (max-width:767px) {
+        padding: 20px 0;
+    }
     h2 {
         font-size: 36px;
         margin: 10px 0;
@@ -1973,12 +1975,15 @@ section {
         top: 30px;
         left: 50%;
         transform: translateX(-50%);
-        background: #F6F6F6;
+        background: #DEDEDC;
         z-index: -1;
         @media screen and (max-width:1440px) {
             height: 100px;
             width: 100px;
             top: 25px;
+        }
+        @media screen and (max-width:767px) {
+            content: none;
         }
     }
 
@@ -2391,6 +2396,9 @@ section {
             @media screen and (max-width:991px) {
                 font-size: 14px;
             }
+            @media screen and (max-width:767px) {
+                margin-bottom: 0 !important;
+            }
         }
     }
 
@@ -2636,7 +2644,7 @@ section {
             }
 
             @media screen and (max-width:767px) {
-                font-size: 17px;
+                font-size: 14px;
                 padding: 10px 15px;
                 border: 1px solid transparent;
             }
@@ -4262,6 +4270,9 @@ footer {
     }
     p{
         font-size: 18px;
+    }
+    &::before {
+        background: #F6F6F6;
     }
 }
 .aboutUs{

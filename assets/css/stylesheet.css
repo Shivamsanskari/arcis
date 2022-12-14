@@ -481,7 +481,7 @@ header.sticky .navbar-nav.mainmenu .menuMobile .bar3 {
 .link-industry.opened,
 .link-casestudy.opened,
 .mainmegamenu.opened {
-  top: 63px;
+  top: 50px;
   opacity: 1;
 }
 
@@ -1802,6 +1802,11 @@ section {
 .countings-wrapper {
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .countings-wrapper {
+    padding: 20px 0;
+  }
+}
 .countings-wrapper h2 {
   font-size: 36px;
   margin: 10px 0;
@@ -1852,7 +1857,7 @@ section {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background: #F6F6F6;
+  background: #DEDEDC;
   z-index: -1;
 }
 @media screen and (max-width: 1440px) {
@@ -1860,6 +1865,11 @@ section {
     height: 100px;
     width: 100px;
     top: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .countings-wrapper::before {
+    content: none;
   }
 }
 
@@ -2247,6 +2257,11 @@ section {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 767px) {
+  .caseStudy .tabData .smallText {
+    margin-bottom: 0 !important;
+  }
+}
 .caseStudy::before {
   position: absolute;
   width: 400px;
@@ -2492,7 +2507,7 @@ section {
 }
 @media screen and (max-width: 767px) {
   .trans-tabs .nav-tabs .nav-link {
-    font-size: 17px;
+    font-size: 14px;
     padding: 10px 15px;
     border: 1px solid transparent;
   }
@@ -4124,6 +4139,9 @@ footer::before {
 }
 .counting-innerpage p {
   font-size: 18px;
+}
+.counting-innerpage::before {
+  background: #F6F6F6;
 }
 
 .aboutUs {
