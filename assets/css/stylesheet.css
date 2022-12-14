@@ -1852,7 +1852,7 @@ section {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background: #DEDEDC;
+  background: #F6F6F6;
   z-index: -1;
 }
 @media screen and (max-width: 1440px) {
@@ -3558,7 +3558,7 @@ footer::before {
   display: block;
   text-transform: uppercase;
   font-size: 14px;
-  color: #535356;
+  color: #1E1E1E;
   margin-bottom: 5px;
   font-weight: 600;
 }
@@ -4037,6 +4037,95 @@ footer::before {
   margin-top: 10px;
 }
 
+.movingCircle {
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 1199px) {
+  .movingCircle img {
+    width: 150% !important;
+    margin-left: -25%;
+    max-width: none !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .movingCircle img {
+    width: 300% !important;
+    margin-left: -50%;
+  }
+}
+.movingCircle .fixedCircleIcon {
+  position: absolute;
+  top: 30px;
+  left: -3%;
+  width: 10%;
+}
+@media screen and (max-width: 1199px) {
+  .movingCircle .fixedCircleIcon {
+    width: 14%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .movingCircle .fixedCircleIcon {
+    display: none;
+  }
+}
+.movingCircle .movingCircleIcon {
+  position: absolute;
+  top: -8.5%;
+  left: -5%;
+  width: 14%;
+  -webkit-animation: movecircular 15s linear infinite;
+          animation: movecircular 15s linear infinite;
+  transform-origin: center center;
+}
+@media screen and (max-width: 1440px) {
+  .movingCircle .movingCircleIcon {
+    top: -6%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .movingCircle .movingCircleIcon {
+    width: 22%;
+    top: -7%;
+    left: -7%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .movingCircle .movingCircleIcon {
+    top: -3.5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .movingCircle .movingCircleIcon {
+    display: none;
+  }
+}
+
+@-webkit-keyframes movecircular {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movecircular {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.counting-innerpage h2 {
+  font-size: 28px;
+}
+.counting-innerpage p {
+  font-size: 18px;
+}
+
 .aboutUs {
   text-align: center;
 }
@@ -4045,4 +4134,289 @@ footer::before {
 }
 .aboutUs .sectionheading {
   margin-bottom: 50px;
+}
+.aboutUs .innerContent {
+  margin-bottom: 90px;
+}
+@media screen and (max-width: 991px) {
+  .aboutUs .innerContent {
+    margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .aboutUs .innerContent {
+    margin-bottom: 50px;
+  }
+}
+.aboutUs::after {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  right: -200px;
+  content: "";
+  border: 75px solid #565F7D;
+  opacity: 0.2;
+  z-index: 1;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1440px) {
+  .aboutUs::after {
+    width: 320px;
+    height: 320px;
+    bottom: -160px;
+    left: -160px;
+    border: 50px solid #565F7D;
+  }
+}
+
+.nocircle::after {
+  content: none;
+}
+.nocircle::before {
+  content: none;
+}
+
+.circleLeft::after {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: -200px;
+  content: "";
+  border: 75px solid #565F7D;
+  opacity: 0.2;
+  z-index: 1;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1440px) {
+  .circleLeft::after {
+    width: 320px;
+    height: 320px;
+    bottom: -160px;
+    right: -160px;
+    border: 50px solid #565F7D;
+  }
+}
+
+.ourvision {
+  background: transparent linear-gradient(0deg, #003A74 0%, #0D82AF 100%) 0% 0% no-repeat;
+}
+.ourvision .sectionheading {
+  margin-bottom: 25px;
+}
+.ourvision li {
+  margin-bottom: 10px;
+}
+.ourvision p, .ourvision li {
+  color: #FFFFFF;
+}
+
+.experienceTeam {
+  position: relative;
+  overflow: hidden;
+  background: #E5E5E1;
+}
+.experienceTeam .smallTopHeading {
+  font-size: 30px;
+}
+@media screen and (max-width: 991) {
+  .experienceTeam .smallTopHeading {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .experienceTeam .smallTopHeading {
+    font-size: 20px;
+  }
+}
+.experienceTeam::before {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  top: -200px;
+  content: "";
+  border: 75px solid #565F7D;
+  opacity: 0.2;
+  z-index: 1;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1440px) {
+  .experienceTeam::before {
+    width: 320px;
+    height: 320px;
+    top: -160px;
+    left: -160px;
+    border: 50px solid #565F7D;
+  }
+}
+.experienceTeam .directorsbox {
+  position: relative;
+}
+.experienceTeam .member-slider .carousel-control {
+  top: -70px;
+  z-index: 10;
+}
+.experienceTeam .member-slider .carousel-control.carousel-control-left {
+  right: 80px;
+}
+
+.getintouchForm {
+  background: #F5F5F5;
+}
+.getintouchForm .smallTopHeading {
+  font-size: 38px;
+}
+@media screen and (max-width: 991) {
+  .getintouchForm .smallTopHeading {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .getintouchForm .smallTopHeading {
+    font-size: 20px;
+  }
+}
+.getintouchForm .getintouchwraper {
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 60px 50px;
+  margin-top: 45px;
+}
+@media screen and (max-width: 991px) {
+  .getintouchForm .getintouchwraper {
+    padding: 30px 15px;
+  }
+}
+.getintouchForm .getintouchwraper.contact-form-wraper {
+  margin-top: -400px;
+  z-index: 2;
+  position: relative;
+}
+@media screen and (max-width: 1440px) {
+  .getintouchForm .getintouchwraper.contact-form-wraper {
+    margin-top: -300px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .getintouchForm .getintouchwraper.contact-form-wraper {
+    margin-top: -80px;
+  }
+}
+.getintouchForm .getintouchwraper .wpcf7-form {
+  margin-top: 40px;
+}
+.getintouchForm .getintouchwraper label {
+  font-size: 16px;
+  color: #1E1E1E;
+  margin: 0;
+}
+.getintouchForm .getintouchwraper .wpcf7-response-output {
+  font-size: 14px;
+}
+.getintouchForm .getintouchwraper .wpcf7-not-valid-tip {
+  font-size: 12px;
+}
+.getintouchForm .getintouchwraper .form-control, .getintouchForm .getintouchwraper .form-select {
+  padding: 0;
+  margin: 0 0 10px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #B8B8B8;
+}
+@media screen and (max-width: 991px) {
+  .getintouchForm .getintouchwraper .form-control, .getintouchForm .getintouchwraper .form-select {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .getintouchForm .getintouchwraper .form-control, .getintouchForm .getintouchwraper .form-select {
+    font-size: 14px;
+  }
+}
+.getintouchForm .getintouchwraper .form-control:focus, .getintouchForm .getintouchwraper .form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+.getintouchForm .getintouchwraper textarea.form-control {
+  height: 75px;
+}
+.getintouchForm .getintouchwraper .wpcf7-acceptance label {
+  display: flex;
+  font-size: 16px;
+}
+.getintouchForm .getintouchwraper .wpcf7-acceptance label input {
+  min-width: 25px;
+  margin-right: 10px;
+  border: 2px solid #535356;
+}
+.getintouchForm .getintouchwraper .wpcf7-acceptance label input::after {
+  left: 7px;
+  top: 3px;
+}
+.getintouchForm .getintouchwraper .wpcf7-acceptance label input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.getintouchForm .getintouchwraper .getintouchsubmit {
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .getintouchForm .getintouchwraper .getintouchsubmit {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+.getintouchForm .getintouchwraper .getintouchsubmit .clkbtn {
+  width: 150px;
+  background: #4958BF !important;
+  color: #FFFFFF !important;
+}
+.getintouchForm .getintouchwraper .getintouchsubmit .clkbtn:hover {
+  color: #1E1E1E !important;
+}
+@media screen and (max-width: 1440px) {
+  .getintouchForm .getintouchwraper .getintouchsubmit .clkbtn {
+    width: 120px;
+  }
+}
+
+.team-expert-slider {
+  position: relative;
+}
+.team-expert-slider .carousel-control {
+  position: absolute;
+  top: -55px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1E1E1E;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1440px) {
+  .team-expert-slider .carousel-control {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .team-expert-slider .carousel-control {
+    display: none;
+  }
+}
+.team-expert-slider .carousel-control svg {
+  width: 10px;
+  fill: #1E1E1E;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.team-expert-slider .carousel-control.carousel-control-left {
+  right: 50px;
+}
+.team-expert-slider .carousel-control.carousel-control-right {
+  right: 0px;
 }/*# sourceMappingURL=stylesheet.css.map */

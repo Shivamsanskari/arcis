@@ -1973,7 +1973,7 @@ section {
         top: 30px;
         left: 50%;
         transform: translateX(-50%);
-        background: #DEDEDC;
+        background: #F6F6F6;
         z-index: -1;
         @media screen and (max-width:1440px) {
             height: 100px;
@@ -3721,7 +3721,7 @@ footer {
             display: block;
             text-transform: uppercase;
             font-size: 14px;
-            color: $gray-dark;
+            color: $primary;
             margin-bottom: 5px;
             font-weight: 600;
         }
@@ -4198,6 +4198,72 @@ footer {
         }
     }
 }
+
+.movingCircle{
+    position: relative;
+    overflow: hidden;
+    img{
+        @media screen and (max-width:1199px) {
+            width: 150% !important;
+            margin-left: -25%;
+            max-width: none !important;
+        }
+        @media screen and (max-width:767px) {
+            width: 300% !important;
+            margin-left: -50%;
+        }
+    }
+
+    .fixedCircleIcon{
+        position: absolute;
+        top: 30px;
+        left: -3%;
+        width: 10%;
+        @media screen and (max-width:1199px) {
+            width: 14%;
+        }
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+    
+    }
+    .movingCircleIcon{
+        position: absolute;
+        top: -8.5%;
+        left: -5%;
+        width: 14%;
+        animation: movecircular 15s linear infinite;
+        transform-origin: center center;
+        @media screen and (max-width:1440px) {
+            top: -6%;
+        }
+        @media screen and (max-width:1199px) {
+            width: 22%;
+            top: -7%;
+            left: -7%;
+        }
+        @media screen and (max-width:991px) {
+            top: -3.5%;
+        }
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+    }
+}
+
+@keyframes movecircular {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.counting-innerpage{
+    h2{
+        font-size: 28px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
 .aboutUs{
     text-align: center;
     .smallTopHeading{
@@ -4205,5 +4271,256 @@ footer {
     }
     .sectionheading{
         margin-bottom: 50px;
+    }
+    .innerContent{
+        margin-bottom: 90px;
+        @media screen and (max-width:991px) {
+            margin-bottom: 70px;
+        }
+        @media screen and (max-width:767px) {
+            margin-bottom: 50px;
+        }
+    }
+    &::after {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        bottom: -200px;
+        right: -200px;
+        content: '';
+        border: 75px solid #565F7D;
+        opacity: 0.2;
+        z-index: 1;
+        border-radius: 50%;
+
+        @media screen and (max-width:1440px) {
+            width: 320px;
+            height: 320px;
+            bottom: -160px;
+            left: -160px;
+            border: 50px solid #565F7D;
+        }
+    }
+}
+.nocircle{
+    &::after{
+        content: none;
+    }
+    &::before{
+        content: none;
+    }
+}
+.circleLeft{
+    &::after {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        bottom: -200px;
+        left: -200px;
+        content: '';
+        border: 75px solid #565F7D;
+        opacity: 0.2;
+        z-index: 1;
+        border-radius: 50%;
+
+        @media screen and (max-width:1440px) {
+            width: 320px;
+            height: 320px;
+            bottom: -160px;
+            right: -160px;
+            border: 50px solid #565F7D;
+        }
+    }
+}
+.ourvision{
+    background: transparent linear-gradient(0deg, #003A74 0%, #0D82AF 100%) 0% 0% no-repeat ;
+    .sectionheading{
+        margin-bottom: 25px;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+    p,li{
+        color: $white;
+    }
+}
+.experienceTeam{
+    position: relative;
+    overflow: hidden;
+    background: $gray;
+    .smallTopHeading{
+        font-size: 30px;
+        @media screen and (max-width:991) {
+            font-size: 24px;
+        }
+        @media screen and (max-width:767px) {
+            font-size: 20px;
+        }
+    }
+    &::before {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        left: -200px;
+        top: -200px;
+        content: '';
+        border: 75px solid #565F7D;
+        opacity: 0.2;
+        z-index: 1;
+        border-radius: 50%;
+
+        @media screen and (max-width:1440px) {
+            width: 320px;
+            height: 320px;
+            top: -160px;
+            left: -160px;
+            border: 50px solid #565F7D;
+        }
+    }
+    .directorsbox{
+        position: relative;
+    }
+    .member-slider{
+        .carousel-control{
+            top: -70px;
+            z-index: 10;
+            &.carousel-control-left{
+                right: 80px;
+            }
+        }
+    }
+}
+
+.getintouchForm{
+    background: $bg-light;
+    .smallTopHeading{
+        font-size: 38px;
+        @media screen and (max-width:991) {
+            font-size: 30px;
+        }
+        @media screen and (max-width:767px) {
+            font-size: 20px;
+        }
+    }
+    .getintouchwraper{
+        border-radius: 10px;
+        background: $white;
+        padding: 60px 50px;
+        margin-top: 45px;
+        @media screen and (max-width:991px) {
+            padding: 30px 15px;
+        }
+        &.contact-form-wraper{
+            margin-top: -400px;
+            z-index: 2;
+            position: relative;
+            @media screen and (max-width:1440px) {
+                margin-top: -300px;
+            }
+            @media screen and (max-width:991px) {
+                margin-top: -80px;
+            }
+        }
+        .wpcf7-form{
+            margin-top: 40px;
+        }
+        label{
+            font-size: 16px;
+            color: $primary;
+            margin: 0;
+        }
+        .wpcf7-response-output{
+            font-size: 14px;
+        }
+        .wpcf7-not-valid-tip{
+            font-size: 12px;
+        }
+        .form-control,.form-select{
+            padding: 0;
+            margin: 0 0 10px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid $border;
+            @media screen and (max-width:991px) {
+                font-size: 15px;
+            }
+            @media screen and (max-width:767px) {
+                font-size: 14px;
+            }
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        textarea.form-control{
+            height:75px;
+        }
+        .wpcf7-acceptance label{
+            display: flex;
+            font-size: 16px; 
+            input{
+                min-width: 25px;
+                margin-right: 10px;
+                border: 2px solid $gray-dark;
+                &::after{
+                    left: 7px;
+                    top: 3px;
+                }
+                &:focus{outline: none; box-shadow: none;}
+            }
+        }
+        .getintouchsubmit{
+            text-align: right;
+            @media screen and (max-width:767px) {
+                text-align: center;
+                padding-top: 20px;
+            }
+            .clkbtn{
+                width: 150px;
+                background: $blue-light !important;
+                color: $white !important;
+                &:hover{
+                    color: $primary !important;
+                }
+                @media screen and (max-width:1440px) {
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+
+.team-expert-slider{
+    position: relative;
+    .carousel-control{
+        position: absolute;
+        top: -55px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $primary;
+        border-radius: 50%;
+        @media screen and (max-width:1440px) {
+            width: 36px;
+            height: 36px;
+        }
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+        svg{
+            width: 10px;
+            fill: $primary;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &.carousel-control-left{
+            right: 50px;
+        }
+        &.carousel-control-right{
+            right: 0px;
+        }
     }
 }
