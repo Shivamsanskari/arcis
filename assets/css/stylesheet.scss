@@ -4266,10 +4266,14 @@ footer {
 
 .counting-innerpage{
     h2{
-        font-size: 28px;
+        @media screen and (min-width:991px) {
+            font-size: 28px;
+        }
     }
     p{
-        font-size: 18px;
+        @media screen and (min-width:991px) {
+            font-size: 18px;
+        }
     }
     &::before {
         background: #F6F6F6;
@@ -4282,6 +4286,9 @@ footer {
     }
     .sectionheading{
         margin-bottom: 50px;
+        @media screen and (max-width:767px) {
+            margin-bottom: 20px;
+        }
     }
     .innerContent{
         margin-bottom: 90px;
